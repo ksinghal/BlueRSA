@@ -224,19 +224,19 @@ extension Data {
 				switch self {
 				
 				case .sha1:
-					return .rsaEncryptionOAEPSHA1AESGCM
+					return .rsaEncryptionOAEPSHA1
 				
 				case .sha224:
-					return .rsaEncryptionOAEPSHA224AESGCM
+					return .rsaEncryptionOAEPSHA224
 				
 				case .sha256:
-					return .rsaEncryptionOAEPSHA256AESGCM
+					return .rsaEncryptionOAEPSHA256
 				
 				case .sha384:
-					return .rsaEncryptionOAEPSHA384AESGCM
+					return .rsaEncryptionOAEPSHA384
 				
 				case .sha512:
-					return .rsaEncryptionOAEPSHA512AESGCM
+					return .rsaEncryptionOAEPSHA512
                     
                 case .gcm:
                     return .rsaEncryptionOAEPSHA1AESGCM
