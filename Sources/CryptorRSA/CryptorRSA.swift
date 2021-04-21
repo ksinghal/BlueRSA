@@ -697,10 +697,10 @@ public class CryptorRSA {
 				let encryptedDataLength = Int(self.data.count) - encKeyLength - encIVLength
 
 				// Extract encryptedKey, encryptedData, encryptedIV from data
-				// self.data = encryptedKey + encryptedData + encryptedIV
-				let encryptedKey = self.data.subdata(in: 0..<encKeyLength)
-				let encryptedData = self.data.subdata(in: encKeyLength..<encKeyLength+encryptedDataLength)
-				let encryptedIV = self.data.subdata(in: encKeyLength+encryptedDataLength..<self.data.count)
+				let fullData = encryptedKey + encryptedData + encryptedIV
+				let encryptedKey = fullData.subdata(in: 0..<encKeyLength)
+				let encryptedData = fullData.subdata(in: encKeyLength..<encKeyLength+encryptedDataLength)
+				let encryptedIV = fullData.subdata(in: encKeyLength+encryptedDataLength..<fullData.count)
 				
 				let rsaDecryptCtx = EVP_CIPHER_CTX_new_wrapper()
 				
