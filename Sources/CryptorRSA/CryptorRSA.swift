@@ -689,6 +689,11 @@ public class CryptorRSA {
 				// Size of the corresponding cipher's IV
 				let encIVLength = Int(EVP_CIPHER_iv_length(.make(optional: encType)))
 				// Size of encryptedKey
+				print("***")
+				print(self.data.count)
+				print(encKeyLength)
+				print(encIVLength)
+				print("***")
 				let encryptedDataLength = Int(self.data.count) - encKeyLength - encIVLength
 
 				// Extract encryptedKey, encryptedData, encryptedIV from data
