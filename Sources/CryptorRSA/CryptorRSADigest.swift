@@ -158,7 +158,7 @@ extension Data {
 					return (.init(EVP_sha384()), .init(EVP_aes_256_cbc()), RSA_PKCS1_OAEP_PADDING)
 		
 				case .sha512:
-					return (.init(EVP_sha512()), .init(EVP_aes_512_cbc()), RSA_PKCS1_OAEP_PADDING)
+					return (.init(EVP_sha512()), .init(EVP_aes_128_gcm()), RSA_PKCS1_OAEP_PADDING)
                     
                 case .gcm:
                     return (.init(EVP_sha1()), .init(EVP_aes_128_gcm()), RSA_PKCS1_OAEP_PADDING)
